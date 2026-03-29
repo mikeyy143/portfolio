@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammad Azam | Portfolio</title>
+    <meta name="description" content="A cinematic black-and-white developer portfolio for Mohammad Azam.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Grain Overlay -->
+    <div class="grain-overlay" aria-hidden="true"></div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="custom-cursor" aria-hidden="true"></div>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader" aria-live="polite">
+        <div class="preloader-content">
+            <div class="loading-kicker">Portfolio Sequence</div>
+            <div class="loading-text">Loading <span id="loading-percentage">0</span>%</div>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-left">
+            <a href="#hero-scroll" class="logo">Mohammad Azam</a>
+        </div>
+        <div class="nav-center">
+             <a href="#stack" class="nav-link">Stack</a>
+             <a href="#projects" class="nav-link">Projects</a>
+            <a href="#work" class="nav-link">Work</a>
+           
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+        <div class="nav-right">
+            <a href="#contact" class="btn-primary">Hire Me &rarr;</a>
+        </div>
+    </nav>
+
+    <!-- Canvas Scrollytelling Section -->
+    <section class="hero-scroll-container" id="hero-scroll">
+        <div class="sticky-hero">
+            <div class="hero-glow" aria-hidden="true"></div>
+            <canvas id="hero-canvas" aria-label="Animated portrait sequence of Mohammad Azam"></canvas>
+
+            <!-- Overlay Content for Beats -->
+            <div class="beats-container">
+                
+                <!-- Beat 1: Intro -->
+                <div class="beat-block" id="beat-1">
+                    <div class="identity-block">
+                        <div class="accent-line"></div>
+                        <div class="identity-content">
+                            <h1 class="name">Mohammad Azam</h1>
+                            <h2 class="role">B.Tech Student &middot; Full Stack Developer</h2>
+                            <p class="tagline">"I don't just write code. I engineer experiences."</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Beat 2: Skills Reveal -->
+                <div class="beat-block right-align" id="beat-2">
+                    <div class="skills-block">
+                        <h3 class="section-label">EXPERTISE</h3>
+                        <h2 class="skills-title">Full Stack Development</h2>
+                        <p class="skills-copy">Crafting responsive products with strong engineering discipline, thoughtful systems, and a sharp eye for interface detail.</p>
+                        <div class="pills-grid">
+                            <span class="pill">React</span>
+                            <span class="pill">Next.js</span>
+                            <span class="pill">Node.js</span>
+                            <span class="pill">TypeScript</span>
+                            
+                            
+                            <span class="pill">APIs</span>
+                            <span class="pill">UI/UX</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Beat 3: Projects Tease -->
+                <div class="beat-block left-align" id="beat-3">
+                    <div class="tease-block">
+                        <h3 class="section-label">SELECTED WORK</h3>
+                        <h2 class="tease-quote">"Projects that solve real problems."</h2>
+                        <p class="tease-link">&rarr; View 3 featured case studies below</p>
+                        <div class="tease-points">
+                            <span>Product Thinking</span>
+                            <span>Performance First</span>
+                            <span>Clean Systems</span>
+                        </div>
+                        <div class="tease-line"></div>
+                    </div>
+                </div>
+
+                <!-- Beat 4: Philosophy -->
+                <div class="beat-block center-align" id="beat-4">
+                    <div class="philosophy-block">
+                        <p class="philosophy-quote">
+                            "Clean code is not written for machines.<br>
+                            It's written for the next developer<br>
+                            who has to read it at 2am."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Beat 5: CTA -->
+                <div class="beat-block center-align" id="beat-5">
+                    <div class="final-cta-block">
+                        <h2 class="final-cta-title">Let's build something<br>extraordinary together.</h2>
+                        <div class="cta-buttons">
+                            <a href="#contact" class="btn-primary large">Get In Touch &rarr;</a>
+                            <a href="#projects" class="btn-secondary large">View My Work</a>
+                        </div>
+                        <div class="social-links-muted">
+                            <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a> &middot; <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a> &middot; <a href="https://x.com/" target="_blank" rel="noreferrer">Twitter</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Scroll Hint -->
+            <div class="scroll-hint" id="scroll-hint">
+                <div class="scroll-line"></div>
+                <span>Scroll to explore</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sections Below Scroll Sequence -->
+    <div class="content-sections">
+
+        <!-- Tech Stack Grid (Marquee) -->
+        <section id="stack" class="section-padding fade-in-section">
+            <div class="marquee-container">
+                <div class="marquee-content">
+                    <!-- Repeated twice for seamless scroll -->
+                    
+                    <div class="marquee-item"><span class="mono">JavaScript</span></div>
+                    <div class="marquee-item"><span class="mono">TypeScript</span></div>
+                    <div class="marquee-item"><span class="mono">React</span></div>
+                    <div class="marquee-item"><span class="mono">Next.js</span></div>
+                    <div class="marquee-item"><span class="mono">Node.js</span></div>
+                    <div class="marquee-item"><span class="mono">Express</span></div>
+                    <div class="marquee-item"><span class="mono">MongoDB</span></div>
+                  
+                    <div class="marquee-item"><span class="mono">Tailwind CSS</span></div>
+                    <div class="marquee-item"><span class="mono">Git</span></div>
+                
+                    
+                   
+                    <div class="marquee-item"><span class="mono">JavaScript</span></div>
+                    <div class="marquee-item"><span class="mono">TypeScript</span></div>
+                    <div class="marquee-item"><span class="mono">React</span></div>
+                    <div class="marquee-item"><span class="mono">Next.js</span></div>
+                    <div class="marquee-item"><span class="mono">Node.js</span></div>
+                    <div class="marquee-item"><span class="mono">Express</span></div>
+                    <div class="marquee-item"><span class="mono">MongoDB</span></div>
+                   
+                    <div class="marquee-item"><span class="mono">Tailwind CSS</span></div>
+                    <div class="marquee-item"><span class="mono">Git</span></div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects -->
+        <section id="projects" class="section-padding fade-in-section">
+            <div class="container">
+                <h2 class="section-heading">Featured Projects</h2>
+                <div class="project-grid">
+                    
+                    <div class="project-card">
+                        <div class="card-banner"></div>
+                        <div class="card-content">
+                            <h3>SRMAPI</h3>
+                            <p>SRMAPI is a modern, feature-rich alternative to the traditional SRM Student Portal, designed to provide students with a seamless, fast, and intuitive academic experience.It fetches real-time student data such as attendance, timetable, marks, and course details, while presenting it through a clean and user-friendly interface..</p>
+                            <div class="card-tags">
+                                <span>Next.js</span>
+                                <span>MongoDB</span>
+                                <span>WebSockets</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-banner"></div>
+                        <div class="card-content">
+                            <h3>Equity Point</h3>
+                            <p>Equity Point is a modern educational platform designed to help individuals understand and master the fundamentals of the stock market. It provides a structured, interactive, and beginner-friendly environment where users can learn trading concepts, market analysis, and investment strategies without the risk of real money.</p>
+                            <div class="card-tags">
+                                <span>NextJS</span>
+                                <span>MongoDB</span>
+                                <span>Cashfree</span>
+                            </div>
+                        </div>
+                    </div>
+
+                  
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- About / Brief Bio -->
+        <section id="work" class="section-padding fade-in-section">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-left">
+                        <h2 class="drop-cap-heading">Crafting digital<br>experiences.</h2>
+                    </div>
+                    <div class="about-right">
+                        <div class="bio-paragraph highlight">
+                            <p>I build digital products with an engineer's discipline and a designer's restraint, aiming for clarity, precision, and reliability in every detail.</p>
+                        </div>
+                        <div class="bio-paragraph">
+                            <p>My work lives at the intersection of frontend craft, scalable backend systems, and thoughtful user experience that feels effortless on the surface.</p>
+                        </div>
+                        <div class="bio-paragraph">
+                            <p>Right now, I am focused on turning strong technical foundations into unforgettable product experiences that feel calm, fast, and intentional.</p>
+                        </div>
+                        <div class="terminal-block">
+                            <div class="terminal-header">
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </div>
+                            <pre><code>const azam = {
+  role: "B.Tech Student &rarr; Full Stack Dev",
+  currentlyBuilding: "Something you haven't seen yet",
+  availableForHire: true
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact / Footer -->
+        <footer id="contact" class="section-padding fade-in-section">
+            <div class="container text-center">
+                <h2 class="huge-text">Let's Talk.</h2>
+                <a href="mailto:mohammadazam.dev@gmail.com" class="email-link">azambaig.m3316@gmail.com</a>
+                
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/mikeyazam/" target="_blank" rel="noreferrer">GitHub</a>
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+                    <a href="https://x.com/Mikey157874" target="_blank" rel="noreferrer">Twitter</a>
+                </div>
+
+                <div class="footer-micro">
+                    &copy; 2025 Mohammad Azam &middot; Built with passion and too much coffee
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
